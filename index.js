@@ -170,7 +170,7 @@ async function handleCollege(college, elt) {
     container.appendChild(subjectHeading);
 
     // Create a list element for the free students
-    const freeList = document.createElement('ul');
+    const freeList = document.createElement('ol');
     freeList.classList.add("free")
 
     // Iterate through the free students array
@@ -196,7 +196,7 @@ async function handleCollege(college, elt) {
     p.ariaLabel = subject
     container.appendChild(p)
     // Create a list element for the full students
-    const fullList = document.createElement('ul');
+    const fullList = document.createElement('ol');
 
     // Iterate through the full students array
     for (const student of subjectData.full) {
