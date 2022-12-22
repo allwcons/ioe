@@ -217,7 +217,7 @@ async function handleCollege(college, elt) {
   p_list.forEach(p => {
     p.onclick = (e) => {
       let t = p.nextSibling.classList.contains("opened")
-      let ul_list = document.querySelectorAll("ul.opened")
+      let ul_list = document.querySelectorAll("ol.opened")
       ul_list.forEach(ul => {
         ul.classList.remove("opened")
       })
