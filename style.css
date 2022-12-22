@@ -5,7 +5,6 @@ html, body {
 }
 
 ol{
-  list-style:none;
   margin:0;
   padding:0;
 }
@@ -46,7 +45,6 @@ ol{
 li {
   background-color: #f2f2f2;
   border: 1px solid #ddd;
-  display: flex;
   flex-wrap: wrap;
   margin: 10px;
   padding: 10px;
