@@ -29,14 +29,14 @@ async function readCSV(path) {
 }
 
 function addTo(subject, type, row) {
-  if (checkAvailable(subject, type)) {
+  if (checkAvailable(subject, type,row)) {
     list[subject][type].push(row)
     list[subject].count[type]++
     return true
   }
   return false
 }
-function checkAvailable(subject, type) {
+function checkAvailable(subject, type,student) {
   try {
     let x = 0;
     if(list[subject].female != undefined){
