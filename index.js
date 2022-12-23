@@ -38,11 +38,15 @@ function addTo(subject, type, row) {
 }
 function checkAvailable(subject, type) {
   try {
-    if (list[subject].count[type] < list[subject].max[type] - list[subject].female[type]) {
+    let x = 0;
+    if(list[subject].female != undefined){
+      x = list[subject].female[type]
+    }
+    if (list[subject].count[type] < (list[subject].max[type] - x)) {
       return true
     } else if (student.GENDER == "Female" || student.Gender == "Female") {
       if (list[subject].female) {
-        return list[subject].femaleCount[type] < list[subject].female[type]
+        return list[subject].femaleCount[type] <= list[subject].female[type]
       }
     }
   } catch (e) {
