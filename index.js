@@ -46,7 +46,7 @@ function checkAvailable(subject, type) {
       return true
     } else if (student.GENDER == "Female" || student.Gender == "Female") {
       if (list[subject].female) {
-        return list[subject].femaleCount[type] <= list[subject].female[type]
+        return list[subject].femaleCount[type] < list[subject].female[type]
       }
     }
   } catch (e) {
