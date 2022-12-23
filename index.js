@@ -38,7 +38,7 @@ function addTo(subject, type, row) {
 }
 function checkAvailable(subject, type) {
   try {
-    if (list[subject].count[type] <= list[subject].max[type] - list[subject].female[type]) {
+    if (list[subject].count[type] < list[subject].max[type] - list[subject].female[type]) {
       return true
     } else if (student.GENDER == "Female" || student.Gender == "Female") {
       if (list[subject].female) {
