@@ -1,5 +1,6 @@
 var list = []
 // Parse the CSV file
+let activeCollege;
 
 let collegeElt = document.querySelector(".college")
 function setCollege(value) {
@@ -25,6 +26,18 @@ async function readCSV(path) {
   const response = await fetch(path);
   const csv = await response.text();
   const data = parseCSV(csv);
+
+  return renameTitle(data)
+}
+
+function renameTitle(data){
+  if(activeCollege == "purwanchal"){
+    data.forEach((d)=>{
+      d["Applicant Name"] = d["Full Name"]
+    })
+    console.log(data)
+    return data
+  }
   return data
 }
 
@@ -139,6 +152,7 @@ async function handleCollege(college, elt) {
     b.classList.remove("active")
   })
   elt.classList.add("active")
+  activeCollege = college
 
   const data = await readCSV(`${college}.csv`);
   list = college_list[college]

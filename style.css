@@ -131,15 +131,18 @@ button:hover {
   background-color: #2980b9;
 }
 .college{
-  background-color:tomato;
-  padding-block: 10px;
-  text-align: center;
-  position:fixed;
-  top:0;
-  width:100%;
-  z-index: 100;
-  font-size:1.3em;
-  font-family: system-ui;
+    background-color: tomato;
+    padding-block: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    font-size: 1.3em;
+    font-family: system-ui;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
 }
 .rank{
   background-color: white;
